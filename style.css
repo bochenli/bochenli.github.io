@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+div.padded {padding-left:25px; padding-right:25px;} 
+div.paddedleft {padding-left:25px;}  
+div.paddedright {padding-right:25px;} 
+h1 {font-family: Arial, Helvetica, sans-serif; text-align:center;}
+h2 {font-family: Arial, Helvetica, sans-serif; text-align:center;}
+h2.menu {color:#2E4053;}
+h2.alignleft {font-family: Arial, Helvetica, sans-serif; text-align:left;}
+h3 {font-family: Arial, Helvetica, sans-serif; font-size: 24px}
+h4 {font-family: Arial, Helvetica, sans-serif; font-size: 20px}
+li {font-family: Arial, Helvetica, sans-serif}
+p {font-family: Arial, Helvetica, sans-serif}
+p.aligncenter {font-family: Arial, Helvetica, sans-serif; text-align:center;}
+p.small {font-size:14px}
+p.centeredImage {text-align:center; margin-top:0px; margin-bottom:0px; padding:0px;}
