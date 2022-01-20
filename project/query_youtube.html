@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <title>Bochen Li</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Bochen Li">
+</head>
+
+<body>
+<div id="container"; style="height=2500px; width:1500px; float:center;">
+  <div id="menu"; style="background-color:#A3E4D7 ;height:7000px;width:200px;float:left;">
+    <h2><a href="http://www.rochester.edu/"><img src="../resource/rochester-logo.png"></a></h2>
+        <a href="../index.html", style="text-decoration:none"><h2 class="menu">Home</h2></a>
+        <a href="../resource/CV_BochenLi.pdf", style="text-decoration:none" target="_blank"><h2 class="menu">CV</h2></a>
+        <a href="../project.html", style="text-decoration:none"><h2 class="menu">Projects</h2></a>
+        <a href="../publication.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="../experience.html", style="text-decoration:none"><h2 class="menu">Experiences</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>
+
+<!--        <a href="resource/Research.html", style="text-decoration:none"><h2 class="menu">Research</h2></a>
+        <a href="resource/Publications.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="resource/Resources.html", style="text-decoration:none"><h2 class="menu">Resources</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>-->
+    </div>
+    
+    <div id="content"; style="background-color:#FFFFFF;height:900px;width:900px;float:left;">
+    
+        
+        <div id="container"; class="padded"; style="width:1200px; float:center;">
+
+
+          <h1 class="top1">Query by Video: Cross-modal Music Retrieval</h1>
+
+          <img src="divider.png" style="width:1200px;" align="middle">
+
+
+            <table cellpadding="20">
+            <tr>
+            <td width = "800px", align="left"><p><em>This project is in collaboration with 
+            <a
+            href = "https://www.spotify.com/us">Spotify</a>, mentored by Aparna Kumar.
+            </p>
+
+            </td>
+            
+            <td>&nbsp;</td>
+            <td width = "300px", align="center"><img u="image" src="../image/logo_spotify.png" width="150px" align="right"  />
+            </tr>
+           
+            </table>
+
+
+            <h3> Publication </h3>
+            <li> 
+                Bochen Li and Aparna Kumar, <strong>Query by video: cross-modal music retrieval</strong>, In <em> Proc. International Society for Music Information Retrieval (ISMIR)</em>, 2019.
+            </li> 
+            <br>
+
+            <li> 
+                Bochen Li and Aparna Kumar, <strong>Systems, methods & computer program products for associating media content having different modalities</strong>, <a href="https://www.trademarkelite.com/patent/patent-detail/16439626/20200394213/0"> <em>U.S. Patent 16/439,626</em></a>, June 2019.
+              </li>
+                <br>
+
+
+            <h3> Problem Statement </h3>
+
+              <ul>
+                <li> <b>Input</b>: A short video clip. </li>
+                <li> <b>Ouptut</b>: A list of retrieved song from an existing music database. </li>
+              </ul>
+
+            <img src="query/overview.png" style="width:1200px" class="center">
+
+            <h3> Method </h3>
+
+            <li> The model structure. </li>
+
+            <img src="query/model.gif" style="width:1300px" align="middle">
+
+            <br><br>
+            <li> The learned cross-modal latent emotion space. </li>
+
+            <img src="query/latent_emotion_space.png" style="width:1000px" align="middle">
+
+            <p align="middle"> The t-SNE visualization of the latent emotion space. Four randomly selected regions are presented in colors representing different emotion concepts: gloomy, ambient, delicate, sweet, each with the thumbnails of the paired videos displayed. </p>
+
+
+            <h3> Demo Results </h3>
+
+            <h4> Demo 1 </h4>
+
+              <p> The demo videos present the input silent video with the music track retrieved by the proposed model. </p>
+
+
+              <ul>
+                <li> <b>Query videos</b> are from: The test split of <a href="https://s3-us-west-1.amazonaws.com/emogifs/map.html#">Cowen2017 dataset </a>. </li>
+                <li> <b>Musc Database</b> contains: The test split of AudioSet Music Mood Subset (354 music excerpts). </li>
+              </ul>
+
+              <br>
+
+            <p> Note 
+              <ul>
+                <li> Each Youtube link includes 30 query videos, each one is presented with the 5 top retrieved music excerpts. </li>
+                <li> The rank and cross-modal distance is displayed. </li>
+                <li> Query videos have various durations, but all music has 10 seconds. So some video frames will end earlier than audio track. </li>
+              </ul>
+            </p>
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/AhczykdLUvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/XfoSgkpJqXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/4xPtch0tYxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/QtZ3-mCeZkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/o4vHlU3oIXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/61NvL7NbOCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/yxrRN-TIcxo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/RzEnV_b1n64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/rWid9W5Jwhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/kspSHQcFvB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/fee8qIH0WuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/XMVA9mJxQhI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <br><br>
+            <h4> Demo 2 </h4>
+
+            <p> The demo videos present the input silent video with the music track retrieved by the proposed model. </p>
+
+              <ul>
+                <li> <b>Query videos</b> are from: The Instagram top video posts. </li>
+                <li> <b>Musc Database</b> contains: Spotify popular genres (1195 music excerpts). </li>
+              </ul>
+
+              <br>
+
+            <p> Note 
+              <ul>
+                <li> For each video, only the top retrieved music is presented. </li>
+              </ul>
+            </p>
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/wxCUTNK_DMA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/qx8h0q1Uerc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/pcXgxgpbLIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/o8Suq1xA4bw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/n6KXtDPhCq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/iczibpzKn90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/h9OrnIBafYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/g9OX6aHdIAk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/eaylgKz08V0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/dc6Z1cHjD4I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/bRj1fPAGq-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/bKBIiD0eCBs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/bHBnD9jbtpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/b5w8FRVsLPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/b1Yy2toOJqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Zi0h41wYBqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Z3CslLMdbmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/W9KgJoN8h3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Ve7iOFhlHg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Ujuif_GMYiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/UCYqJMYNCek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/U2mdKt2kWCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/O6iMhHd7FtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/NGiIMvnYxiY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/LScPfMd3Fuk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Ksz-RpY-Xew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/IZeTcmc7EPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/FLELJJcKIlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/EOVTsD_ZO10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/DTca6c7HMOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/CeB7V1ac-Fo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/CbABI7vlszM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/C_-V6-Ab_fg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/9_QMhoxxkYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/7gDYZrVZ53Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/1EbwCOPkclw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/yczLzwXMTWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/yRWew5I9vqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/tG2vAKDBjiQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/ptfXOrL22Kg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/mXyDoGE7I4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/fMYA1CokABQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/bta_srzkD40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/_r_TRF08XJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Yd6whtGiTRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/YAsJBYJxjKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/XFgW53cqEOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/VvrK357qghY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/PPopcYOdPt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/PMoBcTz0Cv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Ov_mrSuo0gw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/OLPBrGInFwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/OGQfgjjdl-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/NvWZnoZRS2U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/L3l0NjX89LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/HZ3wwb_KkLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/DzXSeFPg9o8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/Ca0Hur8Go18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/AwEQYJzzK0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/8oc1yXXO4IE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/8C_IJvWTOWI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="295" height="295" src="https://www.youtube.com/embed/0i3aJZmjE2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+           
+          
+
+
+
+
+          <p> Last Update: Jan 2022 </p>
+
+
+        
+
+
+
+<!--         <div id="separator"; style="background-color:#FFFFFF;width:900px;float:left;">
+          <img src="resource/space.png" width="450" height="2">
+        </div> -->
+      
+     
+    </div>    
+</div>
+
+
+
+</body>
+</html>
