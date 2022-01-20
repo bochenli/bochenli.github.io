@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <title>Bochen Li</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Bochen Li">
+</head>
+
+<body>
+<div id="container"; style="height=2500px; width:1500px; float:center;">
+  <div id="menu"; style="background-color:#A3E4D7 ;height:7000px;width:200px;float:left;">
+    <h2><a href="http://www.rochester.edu/"><img src="../resource/rochester-logo.png"></a></h2>
+        <a href="../index.html", style="text-decoration:none"><h2 class="menu">Home</h2></a>
+        <a href="../resource/CV_BochenLi.pdf", style="text-decoration:none" target="_blank"><h2 class="menu">CV</h2></a>
+        <a href="../project.html", style="text-decoration:none"><h2 class="menu">Projects</h2></a>
+        <a href="../publication.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="../experience.html", style="text-decoration:none"><h2 class="menu">Experiences</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>
+
+<!--        <a href="resource/Research.html", style="text-decoration:none"><h2 class="menu">Research</h2></a>
+        <a href="resource/Publications.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="resource/Resources.html", style="text-decoration:none"><h2 class="menu">Resources</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>-->
+    </div>
+    
+    <div id="content"; style="background-color:#FFFFFF;height:900px;width:900px;float:left;">
+    
+        
+        <div id="container"; class="padded"; style="width:1200px; float:center;">
+
+
+          <h1 class="top1">Skeleton Plays Piano: Online Generation of Pianist Body Movements from MIDI Performance</h1>
+
+          <h2> 
+              <a href="https://bochenli.github.io/">Bochen Li</a>, 
+              Akira Maezawa, 
+              and <a href="http://www.ece.rochester.edu/~zduan">Zhiyao Duan</a>
+            </h2>
+
+          <img src="divider.png" style="width:1200px;" align="middle">
+
+
+            <table cellpadding="20">
+            <tr>
+            <td width = "800px", align="left">
+              <p><em>This project is in collaboration with the 
+              <a href = "https://www.yamaha.com/en/">Yamaha Corporation</a>.
+              <em>This project is partially supported by the National Science Foundation under grant No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>, titled &quot;BIGDATA: F: Audio-Visual Scene Understanding&quot;.</em> <br>
+                  <em>Disclaimer: Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em>
+            </td>
+            
+            <td>&nbsp;</td>
+            <td width = "250px", align="center"><img u="image" src="../image/logo_Yamaha.png" width="200px" align="right"  />
+            <td width = "150px", align="center"><img u="image" src="../image/logo_NSF.png" width="100px" align="right"  /></td>
+            </tr>
+           
+            </table>
+
+
+            
+            
+          
+          <h3>Publication</h3>
+
+            <li> Bochen Li, Akira Maezawa, and Zhiyao Duan, <strong>Skeleton plays piano: online generation of pianist body movements from MIDI performance</strong>, in Proc. <em>International Society for Music Information Retrieval (ISMIR)</em>, 2018.
+              &lt;<a href="../publication/li2018pianist.pdf">pdf</a>&gt;
+              &lt;<a href="../publication/li2018pianist_slides.pdf">slides</a>&gt;
+            </li>
+            <br>
+
+            <li> 
+                Akira Maezawa and Bochen Li, <strong>Information processing method</strong>, <a href="https://uspto.report/patent/app/20200365126?fbclid=IwAR2FkEbVT1sBWLyf-GC1XuZgbvYgTcuJoyB37AIgRORIIUzGJfbUh9XeqDw"><em>U.S. Patent 16/983,341</em></a>, November 2020.
+            </li> 
+            <br>
+
+            <hr>
+            <h3>What is the problem? </h3>
+            <p> We aim to train a system to generate a virtual pianist animation with expressive performance motions given a symbolic music in MIDI format. </p> 
+            <ul>
+            <li>Input:  a live data stream of key depression actions and the corresponding metric structure (optional)</li>
+            <li>Ouput:  a time sequence of body joint coordinates</li>
+            </ul>
+
+            <div id="Imgcen">
+            <img src="skeletonpianist/overview.png" style="width:1000px;" align="middle">
+            </div>
+
+            <hr>
+            <h3>Motivation</h3>
+            <ul>
+            <li>Generating expressive body movement is important for music interactions</li>
+            <li>Most existing framework cannot incorporate music context information for whole-body expressive movement generation</li>
+            </ul>
+            
+            <hr>
+            <h3>Applications</h3>
+            <ul>
+            <li>Demonstration for music learners by replicating a musician's body interpretations of music</li>
+            <li>More immersive music enjoyment experience</li>
+            <li>Visual interactions in automatic computer accompaniment</li>
+            </ul>
+
+            <div id="Imgcen">
+              <img src="skeletonpianist/application.png" style="width:1000px;" align="middle">
+            </div>
+            <br>
+    
+          <hr>
+          <h3>What is our approach?</h3>
+          <p>We first use two CNN structures to parse the raw input of the MIDI note stream and the metric structure, and then feed the extracted feature representations to an LSTM network to generate the body movements, as a sequence of upper-body joint coordinates forming a skeleton. </p>
+
+
+          <div id="Imgcen">
+            <img src="skeletonpianist/network.png" style="width:550px;" align="middle">
+          </div>
+          <br>
+
+          <hr>
+          <h3>Our Results</h3>
+          <h4>Subjective Evaluations</h4>
+          <p>We conduct subjective evaluations to rate the expressiveness and naturalness of the generated skeleton movements compared with the ones extracted from real human players. More specifically, we recruit 18 subjects from Yamaha company to watch 32 10-sec video excerpts of "skeleton plays piano", 16 from the generated ones, and 16 from the real ones. The rating result is plotted in the following figure, where the tracks with significant different ratings are marked with "*". </p>
+
+          <br>
+          <div id="Imgcen">
+            <img src="skeletonpianist/results.png" style="width:1000px;" align="middle">
+          </div>
+          <br>
+
+
+          <h4>Demo Videos</h4>
+          
+          <p>All the generated skeleton movements (compared with real human) for the 16 tracks are listed here: </p>
+          <br>
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/yqIBYe1DZyM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/173gnpjJILQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/2FMpVHgr550?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/su1l1g14Th4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/kQwDXmyz934?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/v_B27Jay8Xs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/7CqdIZwD1pI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/QT4Twny-PTk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      
+
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/WB7peTBA-XE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/JJcwV9cZiUY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/CfKB--dsp98?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/tsmKAyGkem8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/6Ks-oLLXZUA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/A8XCwM9AsVg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/j7EChv733Ig?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="374" src="https://www.youtube.com/embed/uEBocyQSJOU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+          <br>
+          <br>
+
+          <p>
+            Visit the YouTube playlist for the above 16 demo videos
+            &lt;<a href="https://www.youtube.com/playlist?list=PLSf9SKAnNHL1je3Cfsx9xho07sWcvJhGV">here</a>&gt;
+          </p>
+
+          <p>
+            Visit the YouTube playlist for demo videos without comparing with real human
+            &lt;<a href="https://www.youtube.com/playlist?list=PLSf9SKAnNHL3KMLHK2OLqRtYSbwGS4nf2">here</a>&gt;
+          </p>
+
+
+          
+          <br>
+          <hr>
+
+          
+
+
+
+
+
+        
+
+
+
+<!--         <div id="separator"; style="background-color:#FFFFFF;width:900px;float:left;">
+          <img src="resource/space.png" width="450" height="2">
+        </div> -->
+      
+     
+    </div>    
+</div>
+
+
+
+</body>
+</html>
