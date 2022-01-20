@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <title>Bochen Li</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Bochen Li">
+</head>
+
+<body>
+<div id="container"; style="height=2500px; width:1500px; float:center;">
+  <div id="menu"; style="background-color:#A3E4D7 ;height:7000px;width:200px;float:left;">
+    <h2><a href="http://www.rochester.edu/"><img src="../resource/rochester-logo.png"></a></h2>
+        <a href="../index.html", style="text-decoration:none"><h2 class="menu">Home</h2></a>
+        <a href="../resource/CV_BochenLi.pdf", style="text-decoration:none" target="_blank"><h2 class="menu">CV</h2></a>
+        <a href="../project.html", style="text-decoration:none"><h2 class="menu">Projects</h2></a>
+        <a href="../publication.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="../experience.html", style="text-decoration:none"><h2 class="menu">Experiences</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>
+
+<!--        <a href="resource/Research.html", style="text-decoration:none"><h2 class="menu">Research</h2></a>
+        <a href="resource/Publications.html", style="text-decoration:none"><h2 class="menu">Publications</h2></a>
+        <a href="resource/Resources.html", style="text-decoration:none"><h2 class="menu">Resources</h2></a>
+        <a href="http://www.ece.rochester.edu/projects/air/index.html", style="text-decoration:none"><h2 class="menu">AIR Lab</h2></a>-->
+    </div>
+    
+    <div id="content"; style="background-color:#FFFFFF;height:900px;width:900px;float:left;">
+    
+        
+        <div id="container"; class="padded"; style="width:1200px; float:center;">
+
+
+          <h1 class="top1">Audiovisual Singing Voice Separation</h1>
+
+          <img src="divider.png" style="width:1200px;" align="middle">
+
+
+           <table cellpadding="20">
+            <tr>
+            <td width = "800px", align="left">
+              <p><em>This project is in collaboration with the 
+              <a href = "https://ailab.bytedance.com">ByteDance AI Lab</a>.
+              <em>This project is partially supported by the National Science Foundation under grant No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>, titled &quot;BIGDATA: F: Audio-Visual Scene Understanding&quot;.</em> <br>
+                  <em>Disclaimer: Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em>
+            </td>
+            
+            <td>&nbsp;</td>
+            <td width = "250px", align="center"><img u="image" src="../image/logo_bytedance.png" width="200px" align="right"  />
+            <td width = "150px", align="center"><img u="image" src="../image/logo_NSF.png" width="100px" align="right"  /></td>
+            </tr>
+           
+            </table>
+
+
+          <h3>Publications</h3>
+
+            <p> Bochen Li, Yuxuan Wang, and Zhiyao Duan, <strong>Audiovisual Singing Voice Separation</strong>, <em>Transactions of the International Society for Music Information Retrieval</em>, 4(1), ppp.195–209, 2021. DOI: http://doi.org/10.5334/tismir.108. <a href = "http://doi.org/10.5334/tismir.108">http://doi.org/10.5334/tismir.108</a>
+              &lt;<a href="../publication/li2021audiovisual.pdf">pdf</a>&gt;
+          </p>
+
+          <h3> Background / Motivation </h3>
+          <p>
+
+            <ul>
+              <li> Separating a song into vocal and accompaniment components is an active research topic.
+              <li> We propose to apply the visual information corresponding to the singers’ vocal activities to improve the quality of the separated vocal signals.
+              <li> We propose the "solo voice separation" concept, where backing vocal components (if exist) are regarded as accompaniment tracks.
+            </ul>
+
+          </p>
+
+          
+
+
+          <h3> Method </h3>
+
+          <img src="av_singing_separation/model.png"  alt="Model structure"  style="width:750px;" align="middle">
+          <p>
+
+            <ul>
+              <li> (a) The audio subnetwork.
+              <li> (b) The video subnetwork.
+              <li> (c) The audiovisual fusion.
+            </ul>
+
+          </p>
+
+          
+
+          <h3> Results </h3>
+
+
+            <h4> Demo 1 </h4>
+
+            <p> Vocal separation results from the URSing dataset, which was recorded in sound booth with different scenarios as the training/validation data. </p>
+
+
+            <br>
+
+            <table style="width:1000px">
+              <tr>
+                <td> <p align="middle"> <b>  Original mixture </b></p></td>
+                <td> <p align="middle"> <b>  Groud-truth solo vocal </b></p></td> 
+                <td> <p align="middle"> <b>  Result from audio-based method </b></p></td>
+                <td> <p align="middle"> <b>  Result from proposed audiovisual method </b></p></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/URSing/mix/NOOO.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/URSing/vocal/NOOO.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/URSing/a/NOOO.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/URSing/av/NOOO.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+            </table>
+
+
+            <p> 
+            <ul>
+              <li> Separated vocal using audio-based method still have some backing vocals left.
+              <li> The proposed audio-visual method only separates the vocal components related to the solo singer by attending to the mouth movements.
+            </ul>
+
+            <h4> Demo 2 </h4>
+
+            <p> Evaluations on a capella songs downloaded from YouTube.
+
+
+            <table style="width:1600px">
+              <tr>
+                <td> <p align="middle"> <b> Original mixture </b> </p> </td>
+                <td> <p align="middle"> <b> Separated vocal from audio-based method </b> </p></td> 
+                <td> <p align="middle"> <b> Separated solo vocal from proposed method </b> </p></td> 
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/CwrWt3G3EPQ@0-10_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/CwrWt3G3EPQ@0-10_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/CwrWt3G3EPQ@0-10_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/AmmxM2njsAc@100-110_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/AmmxM2njsAc@100-110_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/AmmxM2njsAc@100-110_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+
+
+
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/-T3uR6qWEsc@10-20_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/-T3uR6qWEsc@10-20_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/-T3uR6qWEsc@10-20_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/viimfQi_pUw@13-23_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/viimfQi_pUw@13-23_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/viimfQi_pUw@13-23_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+
+
+
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/w2wKSpYa0vo@40-50_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/w2wKSpYa0vo@40-50_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/w2wKSpYa0vo@40-50_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/xTjLJcXGUpQ@87-97_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/xTjLJcXGUpQ@87-97_roi_a.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/xTjLJcXGUpQ@87-97_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/3MteSlpxCpo@104-114_roi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="500" height="500" controls>
+                        <source src="av_singing_separation/Acapella/3MteSlpxCpo@104-114_roi_b.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+            </table>
+
+
+
+
+
+
+
+
+            <h4> Demo 3 </h4>
+
+            <p> Evaluations on randomly mixed samples (same scenario as the training/validation data).
+
+
+<!--               <ul>
+                <li> <b>Vocal</b>: The Acampella Audition Vocals dataset. </li>
+                <li> <b>Accompaniments</b>: The MUSDB18 dataset. </li>
+              </ul> -->
+
+              <br>
+
+
+
+            <table style="width:1000px">
+              <tr>
+                <td><p align="middle"> <b> Original mixture </b> </p>  </td>
+                <td><p align="middle"> <b> Groud-truth solo vocal </b> </p>  </td>
+                <td><p align="middle"> <b> Result from audio-based method </b> </p>  </td>
+                <td><p align="middle"> <b> Result from proposed audiovisual method </b> </p>  </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/mix/0000 === y4fcsgA2Vgg_00.01.37-00.02.33 === Lyndsey Ollard - Catching Up.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/vocal/0000 === y4fcsgA2Vgg_00.01.37-00.02.33 === Lyndsey Ollard - Catching Up.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/a/0000 === y4fcsgA2Vgg_00.01.37-00.02.33 === Lyndsey Ollard - Catching Up.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/av/0000 === y4fcsgA2Vgg_00.01.37-00.02.33 === Lyndsey Ollard - Catching Up.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/mix/0019 === zcyu_iKmpWA_00.01.44-00.03.15 === Sambasevam Shanmugam - Kaathaadi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/vocal/0019 === zcyu_iKmpWA_00.01.44-00.03.15 === Sambasevam Shanmugam - Kaathaadi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/a/0019 === zcyu_iKmpWA_00.01.44-00.03.15 === Sambasevam Shanmugam - Kaathaadi.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/av/0019 === zcyu_iKmpWA_00.01.44-00.03.15 === Sambasevam Shanmugam - Kaathaadi.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/mix/0020 === wjRHxlLH5Iw_00.00.12-00.01.07 === Enda Reilly - Cur An Long Ag Seol.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/vocal/0020 === wjRHxlLH5Iw_00.00.12-00.01.07 === Enda Reilly - Cur An Long Ag Seol.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/a/0020 === wjRHxlLH5Iw_00.00.12-00.01.07 === Enda Reilly - Cur An Long Ag Seol.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>
+                  <video width="251" height="251" controls>
+                        <source src="av_singing_separation/AAV/av/0020 === wjRHxlLH5Iw_00.00.12-00.01.07 === Enda Reilly - Cur An Long Ag Seol.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+
+
+            </table>
+
+
+
+          
+
+
+
+
+          <p> Last Update: Jan 2022 </p>
+
+
+        
+
+
+
+<!--         <div id="separator"; style="background-color:#FFFFFF;width:900px;float:left;">
+          <img src="resource/space.png" width="450" height="2">
+        </div> -->
+      
+     
+    </div>    
+</div>
+
+
+
+</body>
+</html>
